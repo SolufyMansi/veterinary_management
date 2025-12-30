@@ -1,0 +1,20 @@
+{
+  "creation": "2025-12-29 15:35:00.000000",
+  "docstatus": 0,
+  "doctype": "Number Card",
+  "document_type": "VM Herd",
+  "filters_json": "[]",
+  "function": "Count",
+  "idx": 0,
+  "is_public": 1,
+  "is_standard": 1,
+  "label": "Total Herds",
+  "modified": "2025-12-29 15:35:00.000000",
+  "modified_by": "Administrator",
+  "module": "Veterinary Management",
+  "name": "Total Herds",
+  "owner": "Administrator",
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Monthly",
+  "type": "Document Type"
+}

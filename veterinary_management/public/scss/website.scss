@@ -1,0 +1,71 @@
+// Veterinary Management theme SCSS
+
+$primary: #1f9d8b; // teal
+$navbar-bg: #145f52;
+$body-bg: #f5faf9;
+
+// Override Frappe/ERPNext variables if available
+:root {
+  --primary: #1f9d8b;
+  --primary-color: #1f9d8b;
+  --navbar-bg: #145f52;
+}
+
+body.login {
+  /* Unique veterinary hero background: gradient overlay over image */
+  background:
+    linear-gradient(135deg, rgba(8, 33, 28, 0.85), rgba(31, 157, 139, 0.8)),
+    url('/assets/veterinary_management/login-background.svg') center/cover no-repeat fixed;
+  color: #ffffff;
+}
+
+body.login .page-card {
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.login .page-card-head {
+  background: transparent;
+  border-bottom: none;
+}
+
+body.login .page-card-head .app-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Use your custom logo as background if Website Settings logo not set */
+body.login .page-card-head .app-logo {
+  background-image: url('/assets/veterinary_management/logo.svg');
+}
+
+body.login .page-card-head h4 {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+// Desk top bar and sidebar tweaks
+.navbar {
+  background-color: #145f52 !important;
+}
+
+.navbar .navbar-brand span {
+  font-weight: 600;
+}
+
+.layout-side-section {
+  background-color: #0f2f29;
+}
+
+.layout-side-section .sidebar-section a,
+.layout-side-section .sidebar-section .desk-sidebar-item-label {
+  color: #f0f7f5;
+}
+
+.layout-side-section .desk-sidebar-item.selected {
+  background-color: rgba(31, 157, 139, 0.3);
+}

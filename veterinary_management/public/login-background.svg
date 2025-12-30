@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021716"/>
+      <stop offset="50%" stop-color="#145f52"/>
+      <stop offset="100%" stop-color="#1f9d8b"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1600" height="900" fill="url(#bg2)"/>
+  <!-- Abstract waves -->
+  <path d="M0 620 Q 300 540 600 600 T 1200 580 T 1600 520 V900 H0 Z" fill="rgba(255,255,255,0.05)"/>
+  <path d="M0 700 Q 300 640 650 700 T 1250 690 T 1600 640 V900 H0 Z" fill="rgba(255,255,255,0.04)"/>
+  <!-- Paw pattern circles -->
+  <g fill="rgba(255,255,255,0.06)">
+    <circle cx="200" cy="200" r="40"/>
+    <circle cx="260" cy="150" r="18"/>
+    <circle cx="230" cy="130" r="14"/>
+    <circle cx="170" cy="150" r="18"/>
+    <circle cx="150" cy="210" r="16"/>
+  </g>
+  <g fill="rgba(255,255,255,0.06)">
+    <circle cx="1350" cy="260" r="36"/>
+    <circle cx="1300" cy="220" r="16"/>
+    <circle cx="1400" cy="220" r="16"/>
+    <circle cx="1320" cy="200" r="13"/>
+    <circle cx="1380" cy="200" r="13"/>
+  </g>
+  <!-- Simple line animal silhouette -->
+  <path d="M520 640 C 560 560 640 540 700 560 C 760 580 800 620 830 680" stroke="rgba(255,255,255,0.65)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="530" r="18" fill="rgba(255,255,255,0.65)"/>
+</svg>
