@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Lab-.######",
+ "creation": "2026-01-05 12:46:28.864477",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient",
+  "pet_owner",
+  "hospital",
+  "column_break_fsuc",
+  "patient_name",
+  "pet_owner_email",
+  "basic_information_section",
+  "test_date",
+  "lab_test_template",
+  "reference_doctype",
+  "column_break_eqke",
+  "status",
+  "appointment",
+  "reference_name",
+  "amended_from",
+  "section_break_osow",
+  "results",
+  "conclusion_section",
+  "technician",
+  "conclusion"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_fsuc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "label": "Test Date"
+  },
+  {
+   "fieldname": "lab_test_template",
+   "fieldtype": "Link",
+   "label": "Lab Test Template",
+   "options": "Lab Test Template"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Select",
+   "label": "Reference Doctype",
+   "options": "\nCheck-Up Record\nConsultation"
+  },
+  {
+   "fieldname": "column_break_eqke",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPending\nCompleted"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appointment",
+   "options": "Appointment"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lab Test Result",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_osow",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "conclusion_section",
+   "fieldtype": "Section Break",
+   "label": "Conclusion"
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Technician",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "conclusion",
+   "fieldtype": "Long Text",
+   "label": "Conclusion"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Table",
+   "label": "Test Results",
+   "options": "Lab Test Result Item"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_doctype"
+  },
+  {
+   "fetch_from": "patient.customer",
+   "fieldname": "pet_owner",
+   "fieldtype": "Link",
+   "label": "Pet Owner",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pet_owner.email_id",
+   "fieldname": "pet_owner_email",
+   "fieldtype": "Data",
+   "label": "Pet Owner Email",
+   "options": "Email"
+  },
+  {
+   "default": "Solufy",
+   "fieldname": "hospital",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Hospital",
+   "options": "Company"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-09 16:26:43.454857",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Lab Test Result",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

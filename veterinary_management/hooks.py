@@ -11,6 +11,7 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
+after_migrate = "verinary_management.migrate.after_migrate"
 add_to_apps_screen = [
 	{
 		"name": "veterinary_management",
@@ -19,6 +20,7 @@ add_to_apps_screen = [
 		"route": "/app/veterinary-management"
 	}
 ]
+fixtures=["Translation"]
 
 # Includes in <head>
 # ------------------
@@ -42,7 +44,9 @@ website_theme_scss = "veterinary_management/public/scss/website"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Appointment" : "veterinary_management/customization/appointment/appointment.js",
+              "Customer"    :"veterinary_management/customization/customer/customer.js"
+			  }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -136,13 +140,10 @@ after_install = "veterinary_management.install.after_install"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Appointment": {
+		"on_update": ["veterinary_management.veterinary_management.customization.appointment.appointment.update_visit_date","veterinary_management.veterinary_management.customization.appointment.appointment.validate_double_booking"]}
+}
 
 # Scheduled Tasks
 # ---------------

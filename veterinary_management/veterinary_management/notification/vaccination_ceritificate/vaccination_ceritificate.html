@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .email-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .header h2 {
+            color: #4CAF50;
+            margin: 0;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .content p {
+            margin: 8px 0;
+        }
+        .content b {
+            color: #333;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="email-container">
+        <div class="header">
+            <h2>Vaccination Completed for {{ doc.patient_name or '' }}!</h2>
+        </div>
+        
+        <div class="content">
+            <p>Dear {{ doc.patient_name or '' }}'s Owner,</p>
+            <p>We are pleased to inform you that the vaccination for your pet, <b>{{ doc.patient_name or '' }}</b>, has been successfully completed.</p>
+            <p>The vaccination certificate is attached for your records. Please refer to the attached document for all the details.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Thank you for keeping your pet healthy and safe!</p>
+            <p>Best regards, <br> {{ doc.hospital or '' }}</p>
+        </div>
+    </div>
+
+</body>
+</html>

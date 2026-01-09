@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CNS-.#####",
+ "creation": "2025-12-29 14:08:48.820204",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient",
+  "appointment",
+  "lab_test_required",
+  "column_break_zuxn",
+  "patient_name",
+  "consultation_date",
+  "surgery_required",
+  "section_break_laat",
+  "doctor",
+  "chief_complaint",
+  "diagnosis",
+  "symptoms",
+  "column_break_icpy",
+  "doctor_name",
+  "clinical_notes",
+  "follow_up_date",
+  "advice__instructions",
+  "section_break_hspp",
+  "prescriptions"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Appointment",
+   "options": "Appointment"
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Small Text",
+   "label": "Symptoms"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "prescriptions",
+   "fieldtype": "Table",
+   "label": "Prescriptions",
+   "options": "Prescription"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zuxn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "section_break_laat",
+   "fieldtype": "Section Break",
+   "label": "Doctor's Assessment"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Small Text",
+   "label": "Chief Complaint"
+  },
+  {
+   "fieldname": "column_break_icpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "doctor.employee_name",
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor Name"
+  },
+  {
+   "fieldname": "clinical_notes",
+   "fieldtype": "Small Text",
+   "label": "Clinical Notes"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow Up Date"
+  },
+  {
+   "fieldname": "advice__instructions",
+   "fieldtype": "Small Text",
+   "label": "Advice / Instructions"
+  },
+  {
+   "fieldname": "section_break_hspp",
+   "fieldtype": "Section Break",
+   "label": "Prescription Notes"
+  },
+  {
+   "fieldname": "consultation_date",
+   "fieldtype": "Date",
+   "label": "Consultation Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "lab_test_required",
+   "fieldtype": "Check",
+   "label": " Lab Test Required"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "surgery_required",
+   "fieldtype": "Check",
+   "label": "Surgery Required"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-07 11:58:23.394149",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Consultation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

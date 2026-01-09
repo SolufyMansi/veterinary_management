@@ -1,0 +1,284 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PET-.#####",
+ "creation": "2025-12-29 14:08:18.703485",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "species",
+  "status",
+  "service_type",
+  "last_visit_date",
+  "column_break_eezc",
+  "breed",
+  "microchip_id",
+  "herd",
+  "patient__information_section",
+  "patient_name",
+  "gender",
+  "picture",
+  "column_break_wxyl",
+  "dob",
+  "age",
+  "image",
+  "pet_owner_details_section",
+  "customer",
+  "owner_mobile_numer",
+  "column_break_dume",
+  "pet_owner_name",
+  "address",
+  "general_information_section",
+  "height",
+  "color",
+  "primary_care_doctor",
+  "column_break_cdga",
+  "weight",
+  "blood_group",
+  "rh_rhesus_factor",
+  "vaccination_history_tab",
+  "vaccination_record",
+  "connections_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "species",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Species",
+   "reqd": 1
+  },
+  {
+   "fieldname": "breed",
+   "fieldtype": "Link",
+   "label": "Breed",
+   "options": "Breed"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Pet Owner",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "microchip_id",
+   "fieldtype": "Data",
+   "label": "Microchip ID"
+  },
+  {
+   "fieldname": "herd",
+   "fieldtype": "Link",
+   "label": "Herd",
+   "options": "Herd"
+  },
+  {
+   "fieldname": "column_break_eezc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nSold\nDeceased\nMissing"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Images"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Image",
+   "label": "Image",
+   "options": "picture"
+  },
+  {
+   "fieldname": "patient__information_section",
+   "fieldtype": "Section Break",
+   "label": "Patient  Information"
+  },
+  {
+   "fieldname": "column_break_wxyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer.mobile_no",
+   "fieldname": "owner_mobile_numer",
+   "fieldtype": "Data",
+   "label": "Owner Mobile Numer"
+  },
+  {
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Select",
+   "label": "Color",
+   "options": "White\nRed\nBlack\nGray\nFawn\nSable\nChocolate\nLiver\nBlue\nGinger / Orange\nCream / Buff\nWheaten\nIndigo\nViolet\nTawny\nAmber"
+  },
+  {
+   "fieldname": "primary_care_doctor",
+   "fieldtype": "Link",
+   "label": "Primary Care Doctor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_cdga",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "fieldname": "vaccination_history_tab",
+   "fieldtype": "Tab Break",
+   "label": "Vaccination History"
+  },
+  {
+   "fieldname": "vaccination_record",
+   "fieldtype": "Text Editor",
+   "label": "Vaccination Record",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rh_rhesus_factor",
+   "fieldtype": "Select",
+   "label": "RH (Rhesus factor)",
+   "options": "\nRh-Positive (Rh+)\nRh-Negative (Rh-)"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Service Type",
+   "options": "\nConsultation\nSurgery\nLab Test"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "pet_owner_name",
+   "fieldtype": "Data",
+   "label": "Pet Owner Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "pet_owner_details_section",
+   "fieldtype": "Section Break",
+   "label": "Pet Owner Details"
+  },
+  {
+   "fieldname": "column_break_dume",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer.customer_primary_address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_visit_date",
+   "fieldtype": "Date",
+   "label": "Last Visit Date"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Appointment",
+   "link_fieldname": "custom_pet"
+  },
+  {
+   "link_doctype": "Lab Test Result",
+   "link_fieldname": "patient"
+  },
+  {
+   "link_doctype": "Check-Up Record",
+   "link_fieldname": "patient"
+  },
+  {
+   "link_doctype": "Consultation",
+   "link_fieldname": "patient"
+  },
+  {
+   "link_doctype": "Vaccination Record",
+   "link_fieldname": "animal"
+  }
+ ],
+ "modified": "2026-01-07 16:41:42.123326",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Patient",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

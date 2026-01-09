@@ -1,27 +1,29 @@
 {
  "add_total_row": 0,
+ "add_translate_data": 0,
  "columns": [],
- "creation": "2025-12-29 15:56:00.000000",
+ "creation": "2025-12-29 15:56:00",
  "disabled": 0,
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "letter_head": "",
- "modified": "2025-12-29 15:56:00.000000",
+ "letter_head": null,
+ "modified": "2026-01-07 15:21:57.551220",
  "modified_by": "Administrator",
  "module": "Veterinary Management",
  "name": "VM Appointments Summary",
  "owner": "Administrator",
  "prepared_report": 0,
  "query": "SELECT name AS appointment, customer, vm_animal AS animal, doctor, appointment_date, status FROM `tabVM Appointment` ORDER BY appointment_date DESC LIMIT 500",
- "ref_doctype": "VM Appointment",
+ "ref_doctype": "Appointment",
  "report_name": "VM Appointments Summary",
  "report_type": "Query Report",
  "roles": [
   {
    "role": "System Manager"
   }
- ]
+ ],
+ "timeout": 0
 }

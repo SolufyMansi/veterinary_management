@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Appointment Confirmation</title>
+</head>
+<body>
+    <h2>Appointment Confirmation</h2>
+
+    <p>Dear <strong>{{doc.custom_owner_name or ''}}</strong>,</p>
+
+    <p>Your appointment has been successfully scheduled. Below are the details:</p>
+
+    <ul>
+        <li><strong>Appointment Date:</strong>{{doc.scheduled_time or ''}}</li>
+        <li><strong>Location:</strong> {{ frappe.db.get_value("Address",{"is_your_company_address":1},"address_title") or ''}}   {{ frappe.db.get_value("Address",{"is_your_company_address":1},"address_line1") or ''}}   {{ frappe.db.get_value("Address",{"is_your_company_address":1},"address_line2") or ''}},{{ frappe.db.get_value("Address",{"is_your_company_address":1},"city")or ''}}    {{ frappe.db.get_value("Address",{"is_your_company_address":1},"country")or ''}}    {{ frappe.db.get_value("Address",{"is_your_company_address":1},"pincode")or ''}}</li>
+        <li><strong>Service/Reason for Appointment:</strong> {{doc.custom_reason or ''}}</li>
+    </ul>
+
+    <p>If you need to reschedule or have any questions, please contact us at <a href="mailto:[Contact Email]">{{frappe.db.get_value("Address",{"is_your_company_address":1},"email_id") or ''}}</a>.</p>
+
+    <p>We look forward to seeing you soon!</p>
+
+    <p>Best regards, <br><strong>{{doc.custom_company or ''}}</strong><br>{{frappe.db.get_value("Address",{"is_your_company_address":1},"phone") or ''}}</p>
+</body>
+</html>

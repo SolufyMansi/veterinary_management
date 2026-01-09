@@ -1,0 +1,35 @@
+{
+ "attach_files": "All",
+ "attach_print": 1,
+ "channel": "Email",
+ "condition": "doc.status==\"Vaccinated\"",
+ "creation": "2026-01-05 17:41:02.146803",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Vaccination Record",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Vaccination Confirmation</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n            background-color: #f4f4f4;\n            margin: 0;\n            padding: 20px;\n        }\n        .email-container {\n            background-color: #ffffff;\n            border-radius: 8px;\n            padding: 20px;\n            max-width: 600px;\n            margin: 0 auto;\n            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n        }\n        .header {\n            text-align: center;\n            padding-bottom: 20px;\n        }\n        .header h2 {\n            color: #4CAF50;\n            margin: 0;\n        }\n        .content {\n            margin-bottom: 20px;\n        }\n        .content p {\n            margin: 8px 0;\n        }\n        .content b {\n            color: #333;\n        }\n        .footer {\n            text-align: center;\n            font-size: 14px;\n            color: #777;\n            padding-top: 20px;\n        }\n    </style>\n</head>\n<body>\n\n    <div class=\"email-container\">\n        <div class=\"header\">\n            <h2>Vaccination Completed for {{ doc.patient_name or '' }}!</h2>\n        </div>\n        \n        <div class=\"content\">\n            <p>Dear {{ doc.patient_name or '' }}'s Owner,</p>\n            <p>We are pleased to inform you that the vaccination for your pet, <b>{{ doc.patient_name or '' }}</b>, has been successfully completed.</p>\n            <p>The vaccination certificate is attached for your records. Please refer to the attached document for all the details.</p>\n        </div>\n        \n        <div class=\"footer\">\n            <p>Thank you for keeping your pet healthy and safe!</p>\n            <p>Best regards, <br> {{ doc.hospital or '' }}</p>\n        </div>\n    </div>\n\n</body>\n</html>\n",
+ "message_type": "HTML",
+ "modified": "2026-01-06 10:30:18.123210",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Vaccination Ceritificate",
+ "owner": "Administrator",
+ "print_format": "Vaccination Cerificate",
+ "recipients": [
+  {
+   "receiver_by_document_field": "pet_owner_email",
+   "receiver_by_role": "All"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Mansi P Solufy",
+ "sender_email": "mansi.p.solufy@Gmail.com",
+ "subject": "Vaccination Completetion Ceritificate",
+ "value_changed": "status"
+}

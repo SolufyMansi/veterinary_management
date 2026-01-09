@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CHK-.######",
+ "creation": "2026-01-05 12:04:04.258617",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient",
+  "lab_test_required",
+  "need_for_consultation",
+  "lab_test_type",
+  "column_break_rrmi",
+  "appointment",
+  "amended_from",
+  "patient_name",
+  "section_break_ovcp",
+  "weight",
+  "heart_rate",
+  "appetite",
+  "next_check_up_date",
+  "long_text_wrto",
+  "column_break_hbcl",
+  "status",
+  "temperature",
+  "respiratory_rate",
+  "diagnosis",
+  "findings",
+  "section_break_vgeo",
+  "treatment_given"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ovcp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Check-Up Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hbcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Appointment",
+   "options": "Appointment"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight (kg)"
+  },
+  {
+   "fieldname": "section_break_vgeo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature (\u00b0C)"
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "column_break_rrmi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "heart_rate",
+   "fieldtype": "Int",
+   "label": "Heart Rate"
+  },
+  {
+   "fieldname": "appetite",
+   "fieldtype": "Select",
+   "label": "Appetite",
+   "options": "\nNormal\nLow\nPoor"
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Int",
+   "label": "Respiratory Rate"
+  },
+  {
+   "fieldname": "long_text_wrto",
+   "fieldtype": "Small Text",
+   "label": "Physical Examination"
+  },
+  {
+   "fieldname": "next_check_up_date",
+   "fieldtype": "Date",
+   "label": "Next Check Up Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nCompleted"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Small Text",
+   "label": "Findings"
+  },
+  {
+   "fieldname": "treatment_given",
+   "fieldtype": "Small Text",
+   "label": "Treatment Given"
+  },
+  {
+   "default": "0",
+   "fieldname": "lab_test_required",
+   "fieldtype": "Check",
+   "label": "Lab Test Required"
+  },
+  {
+   "depends_on": "eval:doc.lab_test_required",
+   "fieldname": "lab_test_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Lab Test Type",
+   "options": "\nBlood Test\nUrine Test\nFecal Test\nX-Ray\nUltrasound\nHeartworm Test\nSkin Scraping\nBlood Pressure Measurement\nBiopsy\nAllergy Test\nParasite Test\nLiver Function Test\nKidney Function Test\nElectrocardiogram (ECG)\nCholesterol Test\nGlucose Test\nThyroid Test\nBacterial Culture\nVirus Test\nVaccination Records\nImmunization Titers\nCytology Test"
+  },
+  {
+   "default": "0",
+   "fieldname": "need_for_consultation",
+   "fieldtype": "Check",
+   "label": "Need for Consultation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-07 11:40:15.629522",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Check-Up Record",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

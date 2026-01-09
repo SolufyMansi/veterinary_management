@@ -1,0 +1,34 @@
+{
+ "attach_files": "",
+ "attach_print": 1,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2026-01-09 16:26:48.283229",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Lab Test Result",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Hello <strong>{{ doc.pet_owner }}</strong>,</p>\n\n<p>We are pleased to inform you that the laboratory results for <strong>{{ doc.patient_name }}</strong> are now complete.</p>\n\n<h3>Summary of Visit:</h3>\n\n<ul>\n    <li><strong>Patient ID:</strong> {{ doc.patient }}</li>\n    <li><strong>Test Date:</strong> {{ doc.test_date }}</li>\n    <li><strong>Status:</strong> {{ doc.status }}</li>\n    <li><strong>Accession No.:</strong> {{ doc.reference_name }}</li>\n</ul>\n\n<p>A detailed report, including diagnostic results and clinical conclusions, has been attached to this email as a PDF document.</p>\n\n<p>Please review the attached report, or contact the clinic if you have any questions or wish to schedule a follow-up consultation.</p>\n\n<p>Best regards,</p>\n\n<p><strong>{{ doc.hospital or \"The Veterinary Clinic Team\" }}</strong></p>\n",
+ "message_type": "Markdown",
+ "modified": "2026-01-09 16:40:02.886645",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Lab Test Result",
+ "owner": "Administrator",
+ "print_format": "Lab Test Result",
+ "recipients": [
+  {
+   "receiver_by_document_field": "pet_owner_email",
+   "receiver_by_role": "All"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Mansi P Solufy",
+ "sender_email": "mansi.p.solufy@Gmail.com",
+ "subject": "Lab Test Report  Available: {{ doc.patient_name }} ({{ doc.patient }}) Test ID: {{ doc.name }}"
+}

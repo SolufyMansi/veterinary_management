@@ -1,0 +1,41 @@
+[
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "en",
+  "modified": "2026-01-01 16:45:53.867618",
+  "name": "qh2vq83dta",
+  "source_text": "Employee",
+  "translated_text": "Doctor"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "en",
+  "modified": "2026-01-02 10:09:44.765614",
+  "name": "u57fnjcud1",
+  "source_text": "Customer",
+  "translated_text": "Pet Owner"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "en",
+  "modified": "2026-01-06 16:59:19.259949",
+  "name": "t4ocj8ec6q",
+  "source_text": "Company",
+  "translated_text": "Hospital"
+ }
+]

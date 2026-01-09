@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-05 12:52:36.964005",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "unit",
+  "normal_min",
+  "normal_max",
+  "result",
+  "flag"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Result"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit"
+  },
+  {
+   "fieldname": "normal_min",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Normal Min"
+  },
+  {
+   "fieldname": "normal_max",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Normal Max"
+  },
+  {
+   "fieldname": "flag",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Flag",
+   "options": "\nLow\nNormal\nHigh"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-09 16:17:01.148738",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Lab Test Result Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

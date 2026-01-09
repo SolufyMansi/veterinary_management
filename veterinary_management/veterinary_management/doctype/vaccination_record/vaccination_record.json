@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "VAC-.#####",
+ "creation": "2025-12-29 14:08:48.974646",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "animal",
+  "pet_owner",
+  "vaccine",
+  "date_administered",
+  "amended_from",
+  "status",
+  "column_break_ddvn",
+  "patient_name",
+  "pet_owner_email",
+  "vaccine_name",
+  "next_due_date",
+  "appointment",
+  "hospital"
+ ],
+ "fields": [
+  {
+   "fieldname": "animal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vaccine",
+   "fieldtype": "Link",
+   "label": "Vaccine",
+   "options": "Item"
+  },
+  {
+   "fieldname": "date_administered",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Administered",
+   "reqd": 1
+  },
+  {
+   "fieldname": "next_due_date",
+   "fieldtype": "Date",
+   "label": "Next Due Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nUnvaccinated\nVaccinated\nPostponed"
+  },
+  {
+   "fieldname": "column_break_ddvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Appointment",
+   "options": "Appointment"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vaccination Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "vaccine.item_name",
+   "fieldname": "vaccine_name",
+   "fieldtype": "Data",
+   "label": "Vaccine Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "animal.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fetch_from": "animal.customer",
+   "fieldname": "pet_owner",
+   "fieldtype": "Link",
+   "label": "Pet Owner",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pet_owner.email_id",
+   "fieldname": "pet_owner_email",
+   "fieldtype": "Data",
+   "label": "Pet Owner Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "default": "Solufy (Demo)",
+   "fieldname": "hospital",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Hospital",
+   "options": "Company"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-05 18:01:53.579107",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Vaccination Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

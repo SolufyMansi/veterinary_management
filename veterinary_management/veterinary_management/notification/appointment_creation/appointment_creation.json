@@ -1,0 +1,33 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2026-01-02 13:29:57.934051",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Appointment",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<html>\n<head>\n    <title>Appointment Confirmation</title>\n</head>\n<body>\n    <h2>Appointment Confirmation</h2>\n\n    <p>Dear <strong>{{doc.custom_owner_name or ''}}</strong>,</p>\n\n    <p>Your appointment has been successfully scheduled. Below are the details:</p>\n\n    <ul>\n        <li><strong>Appointment Date:</strong>{{doc.scheduled_time or ''}}</li>\n        <li><strong>Location:</strong> {{ frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"address_title\") or ''}}   {{ frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"address_line1\") or ''}}   {{ frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"address_line2\") or ''}},{{ frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"city\")or ''}}    {{ frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"country\")or ''}}    {{ frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"pincode\")or ''}}</li>\n        <li><strong>Service/Reason for Appointment:</strong> {{doc.custom_reason or ''}}</li>\n    </ul>\n\n    <p>If you need to reschedule or have any questions, please contact us at <a href=\"mailto:[Contact Email]\">{{frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"email_id\") or ''}}</a>.</p>\n\n    <p>We look forward to seeing you soon!</p>\n\n    <p>Best regards, <br><strong>{{doc.custom_company or ''}}</strong><br>{{frappe.db.get_value(\"Address\",{\"is_your_company_address\":1},\"phone\") or ''}}</p>\n</body>\n</html>\n",
+ "message_type": "HTML",
+ "modified": "2026-01-05 11:43:30.998249",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Appointment Creation",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "custom_owner_email_address",
+   "receiver_by_role": ""
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "Mansi P Solufy",
+ "sender_email": "mansi.p.solufy@Gmail.com",
+ "subject": "Appointment Scheduled for {{doc.name}}"
+}
