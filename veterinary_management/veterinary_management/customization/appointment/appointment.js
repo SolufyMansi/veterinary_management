@@ -143,15 +143,15 @@ frappe.ui.form.on("Appointment", {
     }
 });
 
-// frappe.ui.form.on('Appointment', {
-//     custom_duration: function(frm) {
-//         if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
-//             let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
-//             let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
-//             let formattedEndTime = endTime.format('HH:mm:ss');
-//             frm.set_value('custom_scheduled_end_time', formattedEndTime);
-//         }
-//     },
+frappe.ui.form.on('Appointment', {
+    custom_duration: function(frm) {
+        if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
+            let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
+            let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
+            let formattedEndTime = endTime.format('HH:mm:ss');
+            frm.set_value('custom_scheduled_end_time', formattedEndTime);
+        }
+    },
 
     // custom_schedule_time: function(frm) {
     //     if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
@@ -170,4 +170,4 @@ frappe.ui.form.on("Appointment", {
     //         frm.set_value('custom_scheduled_end_time', formattedEndTime);
     //     }
     // }
-// });
+});

@@ -1,0 +1,321 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PHA.#####",
+ "creation": "2026-01-13 12:25:42.385331",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "administration_data",
+  "section_break_ccrlf",
+  "registration_code",
+  "patient",
+  "hospitalisation_date",
+  "attending_physician",
+  "admission_type",
+  "column_break_qfjmr",
+  "expected_discharge_date",
+  "operating_physician",
+  "reason_for_admission",
+  "hospital_bed",
+  "extra_info",
+  "section_break_wmlj3",
+  "transfer_bed",
+  "nutrition_tab",
+  "belief",
+  "vegetarian",
+  "nutrition_notes__directions",
+  "column_break_edpno",
+  "therapeutic_diets",
+  "diet",
+  "remarks",
+  "medication_tab",
+  "medication",
+  "care_plan_tab",
+  "nursing_plan",
+  "column_break_d1bli",
+  "discharge_plan",
+  "icu_tab",
+  "icu",
+  "new_born_tab",
+  "newborn_name",
+  "birth_date",
+  "weight",
+  "attending_specialist",
+  "additional_notes",
+  "column_break_pvpg",
+  "mother",
+  "birth_time",
+  "sex",
+  "health_status",
+  "feeding_method",
+  "section_break_subm",
+  "new_born"
+ ],
+ "fields": [
+  {
+   "fieldname": "administration_data",
+   "fieldtype": "Tab Break",
+   "label": "Administration Data"
+  },
+  {
+   "fieldname": "section_break_ccrlf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "registration_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Registration Code",
+   "options": "Appointment"
+  },
+  {
+   "fetch_from": "registration_code.custom_pet",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "hospitalisation_date",
+   "fieldtype": "Date",
+   "label": "Hospitalisation Date"
+  },
+  {
+   "fieldname": "attending_physician",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Attending Physician",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "admission_type",
+   "fieldtype": "Select",
+   "label": "Admission Type",
+   "options": "\nLow\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "column_break_qfjmr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_discharge_date",
+   "fieldtype": "Date",
+   "label": "Expected Discharge Date"
+  },
+  {
+   "fieldname": "operating_physician",
+   "fieldtype": "Link",
+   "label": "Operating Physician",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "reason_for_admission",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reason for Admission"
+  },
+  {
+   "fieldname": "hospital_bed",
+   "fieldtype": "Link",
+   "label": "Hospital Bed",
+   "options": "Hospital Bed"
+  },
+  {
+   "fieldname": "extra_info",
+   "fieldtype": "Data",
+   "label": "Extra Info"
+  },
+  {
+   "fieldname": "section_break_wmlj3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transfer_bed",
+   "fieldtype": "Table",
+   "label": "Transfer Bed",
+   "options": "Transfer Bed"
+  },
+  {
+   "fieldname": "nutrition_tab",
+   "fieldtype": "Tab Break",
+   "label": "Nutrition"
+  },
+  {
+   "fieldname": "belief",
+   "fieldtype": "Data",
+   "label": "Belief"
+  },
+  {
+   "fieldname": "vegetarian",
+   "fieldtype": "Data",
+   "label": "Vegetarian"
+  },
+  {
+   "fieldname": "nutrition_notes__directions",
+   "fieldtype": "Data",
+   "label": "Nutrition Notes / Directions"
+  },
+  {
+   "fieldname": "column_break_edpno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "therapeutic_diets",
+   "fieldtype": "Heading",
+   "label": "Therapeutic Diets"
+  },
+  {
+   "fieldname": "diet",
+   "fieldtype": "Data",
+   "label": "Diet"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "medication_tab",
+   "fieldtype": "Tab Break",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Table",
+   "label": "Medication",
+   "options": "Medication"
+  },
+  {
+   "fieldname": "care_plan_tab",
+   "fieldtype": "Tab Break",
+   "label": "Care Plan"
+  },
+  {
+   "fieldname": "nursing_plan",
+   "fieldtype": "Long Text",
+   "label": "Nursing Plan"
+  },
+  {
+   "fieldname": "column_break_d1bli",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discharge_plan",
+   "fieldtype": "Long Text",
+   "label": "Discharge Plan"
+  },
+  {
+   "fieldname": "icu_tab",
+   "fieldtype": "Tab Break",
+   "label": "ICU"
+  },
+  {
+   "default": "0",
+   "fieldname": "icu",
+   "fieldtype": "Check",
+   "label": "ICU"
+  },
+  {
+   "fieldname": "new_born_tab",
+   "fieldtype": "Tab Break",
+   "label": "New Born"
+  },
+  {
+   "fieldname": "mother",
+   "fieldtype": "Data",
+   "label": "Mother"
+  },
+  {
+   "fieldname": "newborn_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "birth_date",
+   "fieldtype": "Date",
+   "label": "Birth Date"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "attending_specialist",
+   "fieldtype": "Link",
+   "label": "Attending Specialist",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Small Text",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "column_break_pvpg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "birth_time",
+   "fieldtype": "Time",
+   "label": "Birth Time"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Select",
+   "label": "Sex",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "health_status",
+   "fieldtype": "Select",
+   "label": "Health Status",
+   "options": "Normal\nICU\nCritical"
+  },
+  {
+   "fieldname": "feeding_method",
+   "fieldtype": "Select",
+   "label": "Feeding Method",
+   "options": "Mother feeding\nBottle\nTube"
+  },
+  {
+   "fieldname": "section_break_subm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "new_born",
+   "fieldtype": "Table",
+   "label": "Neonatal Conditions",
+   "options": "Newborn Items"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-13 13:10:18.006509",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Patient Hospitalisation Administration",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

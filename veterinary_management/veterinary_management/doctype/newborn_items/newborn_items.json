@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:disease",
+ "creation": "2026-01-13 13:08:03.820250",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "disease",
+  "status",
+  "active",
+  "infectious",
+  "severity",
+  "column_break_t7b4x",
+  "allergy",
+  "pregnancy_warning",
+  "diagnosed",
+  "end",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "disease",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Disease",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "active",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "infectious",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Infectious"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Severity "
+  },
+  {
+   "fieldname": "column_break_t7b4x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allergy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Allergy"
+  },
+  {
+   "fieldname": "pregnancy_warning",
+   "fieldtype": "Data",
+   "label": "Pregnancy Warning"
+  },
+  {
+   "fieldname": "diagnosed",
+   "fieldtype": "Data",
+   "label": "Diagnosed"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Data",
+   "label": "End "
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-13 13:08:03.820250",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Newborn Items",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

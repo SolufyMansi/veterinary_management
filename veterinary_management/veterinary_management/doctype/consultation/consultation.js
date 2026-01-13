@@ -48,7 +48,7 @@ frappe.ui.form.on("Consultation", {
                 });
             }
         }
-        else if (frm.doc.surgery_required && !frm.is_new()){
+        else if (frm.doc.surgery_required){
                 // let apr_btn = frm.add_custom_button(__('Book Surgery Appointment'), function () {
 
                 //     let d = new frappe.ui.Dialog({
