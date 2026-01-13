@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2026-01-13 14:53:39.995914",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-01-13 14:53:39.995914",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "appointment-history",
+ "owner": "Administrator",
+ "page_name": "appointment-history",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Appointment History"
+}

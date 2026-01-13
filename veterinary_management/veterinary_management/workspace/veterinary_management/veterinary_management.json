@@ -9,7 +9,7 @@
    "label": "Appointment Status"
   }
  ],
- "content": "[{\"id\":\"hdr_kpi\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>Appointment History</b></span>\",\"col\":12}},{\"id\":\"nc_total_appt\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Appointments\",\"col\":4}},{\"id\":\"9wTPA-qsi0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Scheduled Appointment\",\"col\":4}},{\"id\":\"JGyj2eeDtw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed Appointments\",\"col\":4}},{\"id\":\"akXbzBLDVW\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YHDe6l2uIG\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Check-Up's Appointments\",\"col\":4}},{\"id\":\"n9DkfhC9CG\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Consulation Appointments\",\"col\":4}},{\"id\":\"y1XQOsRqOA\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Vaccination's Appointments\",\"col\":4}},{\"id\":\"hAHWtWFLos\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Surgery Appointments\",\"col\":4}},{\"id\":\"k6VkPD4V5Y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cancelled Appointments\",\"col\":4}},{\"id\":\"KowXD2IMMW\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Appointment Status\",\"col\":12}},{\"id\":\"fyySvxEueQ\",\"type\":\"chart\",\"data\":{\"chart_name\":\"This Week Appointment History\",\"col\":12}}]",
+ "content": "[{\"id\":\"hdr_kpi\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>Appointment History</b></span>\",\"col\":12}},{\"id\":\"nc_total_appt\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Appointments\",\"col\":4}},{\"id\":\"9wTPA-qsi0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Scheduled Appointment\",\"col\":4}},{\"id\":\"JGyj2eeDtw\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed Appointments\",\"col\":4}},{\"id\":\"ACrFuYvZ8m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"View Appointments Details\",\"col\":4}},{\"id\":\"akXbzBLDVW\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YHDe6l2uIG\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Check-Up's Appointments\",\"col\":4}},{\"id\":\"n9DkfhC9CG\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Consulation Appointments\",\"col\":4}},{\"id\":\"y1XQOsRqOA\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Vaccination's Appointments\",\"col\":4}},{\"id\":\"hAHWtWFLos\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Surgery Appointments\",\"col\":4}},{\"id\":\"k6VkPD4V5Y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cancelled Appointments\",\"col\":4}},{\"id\":\"Wyz97qe3hy\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"KowXD2IMMW\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Appointment Status\",\"col\":12}},{\"id\":\"fyySvxEueQ\",\"type\":\"chart\",\"data\":{\"chart_name\":\"This Week Appointment History\",\"col\":12}}]",
  "creation": "2025-12-29 15:40:00",
  "custom_blocks": [],
  "docstatus": 0,
@@ -78,7 +78,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-01-09 15:19:29.387615",
+ "modified": "2026-01-13 17:49:31.930778",
  "modified_by": "Administrator",
  "module": "Veterinary Management",
  "name": "Veterinary Management",
@@ -117,12 +117,20 @@
   }
  ],
  "owner": "Administrator",
- "parent_page": "",
+ "parent_page": "Hospital",
  "public": 1,
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
  "sequence_id": 50.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "View Appointments Details",
+   "link_to": "appointment-history",
+   "type": "Page"
+  }
+ ],
  "title": "Veterinary Management"
 }
