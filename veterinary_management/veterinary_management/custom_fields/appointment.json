@@ -2,77 +2,73 @@
  "Appointment": [
   {
    "dt": "Appointment",
-   "fieldname": "custom_duration",
-   "fieldtype": "Float",
-   "insert_after": "custom_scheduled_end_time",
-   "label": "Duration",
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Appointment",
-   "fieldname": "custom_scheduled_end_time",
-   "fieldtype": "Time",
-   "insert_after": "status",
-   "label": "Scheduled End Time",
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Appointment",
-   "fieldname": "custom_schedule_time",
-   "fieldtype": "Time",
-   "insert_after": "custom_scheduled_date",
-   "label": "Scheduled Start Time",
-   "module": "Veterinary Management",
-   "reqd": 1
-  },
-  {
-   "default": "Today",
-   "dt": "Appointment",
-   "fieldname": "custom_scheduled_date",
-   "fieldtype": "Date",
-   "insert_after": "scheduled_time",
-   "label": "Scheduled Date",
-   "module": "Veterinary Management",
-   "reqd": 1
-  },
-  {
-   "default": "Solufy (Demo)",
-   "dt": "Appointment",
-   "fieldname": "custom_company",
-   "fieldtype": "Link",
-   "insert_after": "calendar_event",
-   "label": "Company",
-   "module": "Veterinary Management",
-   "options": "Company"
-  },
-  {
-   "dt": "Appointment",
-   "fetch_from": "custom_pet_owner.primary_address",
-   "fieldname": "custom_address_display",
-   "fieldtype": "Small Text",
-   "hidden": 1,
+   "fieldname": "custom_column_break_nne02",
+   "fieldtype": "Column Break",
    "insert_after": "customer_phone_number",
-   "label": "Address Display",
    "module": "Veterinary Management"
   },
   {
    "dt": "Appointment",
-   "fetch_from": "custom_pet_owner.customer_primary_address",
-   "fieldname": "address",
+   "fetch_from": "custom_pet.customer",
+   "fieldname": "custom_pet_owner",
    "fieldtype": "Link",
-   "insert_after": "custom_owner_email_address",
-   "label": "Pet Owner Address",
+   "insert_after": "col_br_2",
+   "label": "Pet Owner",
    "module": "Veterinary Management",
-   "options": "Address"
+   "options": "Customer"
   },
   {
    "dt": "Appointment",
-   "fieldname": "custom_doctor",
-   "fieldtype": "Link",
-   "insert_after": "custom_schedule_time",
-   "label": "Doctor",
+   "fieldname": "custom_reason",
+   "fieldtype": "Select",
+   "insert_after": "custom_duration",
+   "label": "Reason",
    "module": "Veterinary Management",
-   "options": "Employee"
+   "options": "\nCheck-Up\nConsultation\nVaccination\nSurgery"
+  },
+  {
+   "dt": "Appointment",
+   "fetch_from": "custom_doctor.employee_name",
+   "fieldname": "custom_doctor_name",
+   "fieldtype": "Data",
+   "insert_after": "custom_doctor",
+   "label": "Doctor Name",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Appointment",
+   "fetch_from": "custom_pet_owner.customer_name",
+   "fieldname": "custom_owner_name",
+   "fieldtype": "Data",
+   "insert_after": "custom_pet_owner",
+   "label": "Pet Owner Name",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Appointment",
+   "fetch_from": "custom_pet_owner.mobile_no",
+   "fieldname": "custom_owner_mobile_no",
+   "fieldtype": "Data",
+   "insert_after": "custom_owner_name",
+   "label": "Pet Owner Mobile No",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Appointment",
+   "fieldname": "custom_section_break_857ih",
+   "fieldtype": "Section Break",
+   "insert_after": "custom_address_display",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Appointment",
+   "fieldname": "custom_pet",
+   "fieldtype": "Link",
+   "insert_after": "customer_details_section",
+   "label": "Pet",
+   "module": "Veterinary Management",
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "dt": "Appointment",
@@ -87,72 +83,98 @@
   },
   {
    "dt": "Appointment",
-   "fieldname": "custom_pet",
+   "fieldname": "custom_doctor",
    "fieldtype": "Link",
-   "insert_after": "custom_doctor",
-   "label": "Pet",
+   "insert_after": "custom_schedule_time",
+   "label": "Doctor",
    "module": "Veterinary Management",
-   "options": "Patient",
+   "options": "Employee"
+  },
+  {
+   "dt": "Appointment",
+   "fetch_from": "custom_pet_owner.customer_primary_address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "insert_after": "custom_owner_email_address",
+   "label": "Pet Owner Address",
+   "module": "Veterinary Management",
+   "options": "Address"
+  },
+  {
+   "dt": "Appointment",
+   "fetch_from": "custom_pet_owner.primary_address",
+   "fieldname": "custom_address_display",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "insert_after": "address",
+   "label": "Address Display",
+   "module": "Veterinary Management"
+  },
+  {
+   "default": "Solufy (Demo)",
+   "dt": "Appointment",
+   "fieldname": "custom_company",
+   "fieldtype": "Link",
+   "insert_after": "calendar_event",
+   "label": "Company",
+   "module": "Veterinary Management",
+   "options": "Company"
+  },
+  {
+   "default": "Today",
+   "dt": "Appointment",
+   "fieldname": "custom_scheduled_date",
+   "fieldtype": "Date",
+   "insert_after": "scheduled_time",
+   "label": "Scheduled Date",
+   "module": "Veterinary Management",
    "reqd": 1
   },
   {
    "dt": "Appointment",
-   "fieldname": "custom_section_break_857ih",
-   "fieldtype": "Section Break",
-   "insert_after": "address",
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Appointment",
-   "fetch_from": "custom_pet_owner.mobile_no",
-   "fieldname": "custom_owner_mobile_no",
-   "fieldtype": "Data",
-   "insert_after": "custom_owner_name",
-   "label": "Pet Owner Mobile No",
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Appointment",
-   "fetch_from": "custom_pet_owner.customer_name",
-   "fieldname": "custom_owner_name",
-   "fieldtype": "Data",
-   "insert_after": "col_br_2",
-   "label": "Pet Owner Name",
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Appointment",
-   "fetch_from": "custom_doctor.employee_name",
-   "fieldname": "custom_doctor_name",
-   "fieldtype": "Data",
-   "insert_after": "customer_details_section",
-   "label": "Doctor Name",
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Appointment",
-   "fieldname": "custom_reason",
-   "fieldtype": "Select",
-   "insert_after": "custom_duration",
-   "label": "Reason",
+   "fieldname": "custom_schedule_time",
+   "fieldtype": "Time",
+   "insert_after": "custom_scheduled_date",
+   "label": "Scheduled Start Time",
    "module": "Veterinary Management",
-   "options": "\nCheck-Up\nConsultation\nVaccination\nSurgery"
+   "reqd": 1
   },
   {
    "dt": "Appointment",
-   "fieldname": "custom_pet_owner",
+   "fieldname": "custom_scheduled_end_time",
+   "fieldtype": "Time",
+   "insert_after": "status",
+   "label": "Scheduled End Time",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Appointment",
+   "fieldname": "custom_duration",
+   "fieldtype": "Float",
+   "insert_after": "custom_scheduled_end_time",
+   "label": "Duration",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Appointment",
+   "fetch_from": "custom_pet.species",
+   "fieldname": "custom_species",
+   "fieldtype": "Data",
+   "insert_after": "customer_name",
+   "label": "Species",
+   "module": "Veterinary Management",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.custom_reason=='Surgery'",
+   "dt": "Appointment",
+   "fieldname": "custom_surgery_type",
    "fieldtype": "Link",
    "insert_after": "custom_reason",
-   "label": "Pet Owner",
+   "label": "Surgery Type",
+   "mandatory_depends_on": "eval:doc.custom_reason=='Surgery'",
    "module": "Veterinary Management",
-   "options": "Customer"
-  },
-  {
-   "dt": "Appointment",
-   "fieldname": "custom_column_break_nne02",
-   "fieldtype": "Column Break",
-   "insert_after": "customer_name",
-   "module": "Veterinary Management"
+   "options": "Surgery Type"
   }
  ]
 }

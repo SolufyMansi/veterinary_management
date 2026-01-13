@@ -2,82 +2,51 @@
  "Company": [
   {
    "dt": "Company",
-   "fieldname": "custom_services",
-   "fieldtype": "Select",
-   "insert_after": "parent_company",
-   "label": "Services",
-   "module": "Veterinary Management",
-   "options": "\nGeneral Checkup\nVaccinations\nParasite Control (Flea, Tick, Worming)\nSpaying/Neutering\nSurgical Services\nEmergency Care\nLaboratory Services\nDiagnostic Imaging (X-ray, Ultrasound, etc.)\nOrthopedic Surgery\nDental Care (Teeth Cleaning, Extractions)\nCritical Care (ICU)\nPediatrics (Puppy/Kitten Care)\nGeriatrics (Senior Pet Care)\nNutritional Counseling\nEuthanasia\nGrooming Services\nMicrochipping\nBehavioral Counseling\nPet Boarding\nAcupuncture Therapy\nPhysiotherapy/Rehabilitation\nIn-house Pharmacy\nRadiology (X-ray, CT Scan)\nElectrocardiogram (ECG)\nBlood Tests/Urine Tests\nAllergy Testing\nDermatology (Skin Treatment)\nReproductive Services (Artificial Insemination, Breeding)\nEmergency Veterinary Care (24/7)\nVeterinary Dentistry (Orthodontics, Crowns)"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "custom_total_number_of_beds",
-   "fieldtype": "Int",
-   "insert_after": "domain",
-   "label": "Total Number of Beds",
+   "fieldname": "hr_and_payroll_tab",
+   "fieldtype": "Tab Break",
+   "insert_after": "credit_limit",
+   "is_system_generated": 1,
+   "label": "HR & Payroll",
    "module": "Veterinary Management"
   },
   {
    "dt": "Company",
-   "fieldname": "custom_column_break_w0pqy",
-   "fieldtype": "Column Break",
-   "insert_after": "custom_total_number_of_beds",
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "custom_hospital_type",
-   "fieldtype": "Select",
-   "insert_after": "abbr",
-   "label": "Hospital Type",
-   "module": "Veterinary Management",
-   "options": "\nGeneral\nSpecialty\nClinic"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "arrear_component",
-   "fieldtype": "Link",
-   "insert_after": "hra_column_break",
-   "is_system_generated": 1,
-   "label": "Arrear Component",
-   "module": "Veterinary Management",
-   "options": "Salary Component"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "hra_column_break",
-   "fieldtype": "Column Break",
-   "insert_after": "hra_component",
-   "is_system_generated": 1,
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "hra_component",
-   "fieldtype": "Link",
-   "insert_after": "basic_component",
-   "is_system_generated": 1,
-   "label": "HRA Component",
-   "module": "Veterinary Management",
-   "options": "Salary Component"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "basic_component",
-   "fieldtype": "Link",
-   "insert_after": "hra_section",
-   "is_system_generated": 1,
-   "label": "Basic Component",
-   "module": "Veterinary Management",
-   "options": "Salary Component"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "hra_section",
+   "fieldname": "hr_settings_section",
    "fieldtype": "Section Break",
-   "insert_after": "default_payroll_payable_account",
+   "insert_after": "hr_and_payroll_tab",
    "is_system_generated": 1,
-   "label": "HRA Settings",
+   "label": "HR & Payroll Settings",
+   "module": "Veterinary Management"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "dt": "Company",
+   "fieldname": "default_expense_claim_payable_account",
+   "fieldtype": "Link",
+   "insert_after": "hr_settings_section",
+   "is_system_generated": 1,
+   "label": "Default Expense Claim Payable Account",
+   "module": "Veterinary Management",
+   "no_copy": 1,
+   "options": "Account"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "default_employee_advance_account",
+   "fieldtype": "Link",
+   "insert_after": "default_expense_claim_payable_account",
+   "is_system_generated": 1,
+   "label": "Default Employee Advance Account",
+   "module": "Veterinary Management",
+   "no_copy": 1,
+   "options": "Account"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break",
+   "insert_after": "default_employee_advance_account",
+   "is_system_generated": 1,
    "module": "Veterinary Management"
   },
   {
@@ -94,52 +63,83 @@
   },
   {
    "dt": "Company",
-   "fieldname": "column_break_10",
-   "fieldtype": "Column Break",
-   "insert_after": "default_employee_advance_account",
-   "is_system_generated": 1,
-   "module": "Veterinary Management"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "default_employee_advance_account",
-   "fieldtype": "Link",
-   "insert_after": "default_expense_claim_payable_account",
-   "is_system_generated": 1,
-   "label": "Default Employee Advance Account",
-   "module": "Veterinary Management",
-   "no_copy": 1,
-   "options": "Account"
-  },
-  {
-   "depends_on": "eval:!doc.__islocal",
-   "dt": "Company",
-   "fieldname": "default_expense_claim_payable_account",
-   "fieldtype": "Link",
-   "insert_after": "hr_settings_section",
-   "is_system_generated": 1,
-   "label": "Default Expense Claim Payable Account",
-   "module": "Veterinary Management",
-   "no_copy": 1,
-   "options": "Account"
-  },
-  {
-   "dt": "Company",
-   "fieldname": "hr_settings_section",
+   "fieldname": "hra_section",
    "fieldtype": "Section Break",
-   "insert_after": "hr_and_payroll_tab",
+   "insert_after": "default_payroll_payable_account",
    "is_system_generated": 1,
-   "label": "HR & Payroll Settings",
+   "label": "HRA Settings",
    "module": "Veterinary Management"
   },
   {
    "dt": "Company",
-   "fieldname": "hr_and_payroll_tab",
-   "fieldtype": "Tab Break",
-   "insert_after": "credit_limit",
+   "fieldname": "basic_component",
+   "fieldtype": "Link",
+   "insert_after": "hra_section",
    "is_system_generated": 1,
-   "label": "HR & Payroll",
+   "label": "Basic Component",
+   "module": "Veterinary Management",
+   "options": "Salary Component"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "hra_component",
+   "fieldtype": "Link",
+   "insert_after": "basic_component",
+   "is_system_generated": 1,
+   "label": "HRA Component",
+   "module": "Veterinary Management",
+   "options": "Salary Component"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "hra_column_break",
+   "fieldtype": "Column Break",
+   "insert_after": "hra_component",
+   "is_system_generated": 1,
    "module": "Veterinary Management"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "arrear_component",
+   "fieldtype": "Link",
+   "insert_after": "hra_column_break",
+   "is_system_generated": 1,
+   "label": "Arrear Component",
+   "module": "Veterinary Management",
+   "options": "Salary Component"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "custom_hospital_type",
+   "fieldtype": "Select",
+   "insert_after": "abbr",
+   "label": "Hospital Type",
+   "module": "Veterinary Management",
+   "options": "\nGeneral\nSpecialty\nClinic"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "custom_column_break_w0pqy",
+   "fieldtype": "Column Break",
+   "insert_after": "custom_total_number_of_beds",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "custom_total_number_of_beds",
+   "fieldtype": "Int",
+   "insert_after": "domain",
+   "label": "Total Number of Beds",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "Company",
+   "fieldname": "custom_services",
+   "fieldtype": "Select",
+   "insert_after": "parent_company",
+   "label": "Services",
+   "module": "Veterinary Management",
+   "options": "\nGeneral Checkup\nVaccinations\nParasite Control (Flea, Tick, Worming)\nSpaying/Neutering\nSurgical Services\nEmergency Care\nLaboratory Services\nDiagnostic Imaging (X-ray, Ultrasound, etc.)\nOrthopedic Surgery\nDental Care (Teeth Cleaning, Extractions)\nCritical Care (ICU)\nPediatrics (Puppy/Kitten Care)\nGeriatrics (Senior Pet Care)\nNutritional Counseling\nEuthanasia\nGrooming Services\nMicrochipping\nBehavioral Counseling\nPet Boarding\nAcupuncture Therapy\nPhysiotherapy/Rehabilitation\nIn-house Pharmacy\nRadiology (X-ray, CT Scan)\nElectrocardiogram (ECG)\nBlood Tests/Urine Tests\nAllergy Testing\nDermatology (Skin Treatment)\nReproductive Services (Artificial Insemination, Breeding)\nEmergency Veterinary Care (24/7)\nVeterinary Dentistry (Orthodontics, Crowns)"
   }
  ]
 }

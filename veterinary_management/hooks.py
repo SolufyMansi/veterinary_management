@@ -11,7 +11,7 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-after_migrate = "verinary_management.migrate.after_migrate"
+after_migrate = "veterinary_management.migrate.after_migrate"
 add_to_apps_screen = [
 	{
 		"name": "veterinary_management",
@@ -45,7 +45,8 @@ website_theme_scss = "veterinary_management/public/scss/website"
 
 # include js in doctype views
 doctype_js = {"Appointment" : "veterinary_management/customization/appointment/appointment.js",
-              "Customer"    :"veterinary_management/customization/customer/customer.js"
+              "Customer"    :"veterinary_management/customization/customer/customer.js",
+              "ToDo":"veterinary_management/customization/todo/todo.js",
 			  }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -142,7 +143,14 @@ after_install = "veterinary_management.install.after_install"
 
 doc_events = {
 	"Appointment": {
-		"on_update": ["veterinary_management.veterinary_management.customization.appointment.appointment.update_visit_date","veterinary_management.veterinary_management.customization.appointment.appointment.validate_double_booking"]}
+		"on_update": ["veterinary_management.veterinary_management.customization.appointment.appointment.update_visit_date","veterinary_management.veterinary_management.customization.appointment.appointment.validate_double_booking"],
+		},
+	"Sales Invoice": {
+		"on_submit": "veterinary_management.veterinary_management.customization.sales_invoice.sales_invoice.on_submit",
+		},
+    # "ToDo": {
+	# 	"before_save": "veterinary_management.veterinary_management.customization.todo.todo.before_save",
+	# }
 }
 
 # Scheduled Tasks

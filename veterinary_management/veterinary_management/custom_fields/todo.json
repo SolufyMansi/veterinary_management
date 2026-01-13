@@ -1,0 +1,48 @@
+{
+ "ToDo": [
+  {
+   "dt": "ToDo",
+   "fetch_from": "custom_patient.patient_name",
+   "fieldname": "custom_patient_name",
+   "fieldtype": "Data",
+   "insert_after": "custom_surgery_time",
+   "label": "Patient Name",
+   "module": "Veterinary Management",
+   "read_only": 1
+  },
+  {
+   "dt": "ToDo",
+   "fieldname": "custom_patient",
+   "fieldtype": "Link",
+   "insert_after": "custom_surgery_required",
+   "label": "Patient",
+   "module": "Veterinary Management",
+   "options": "Patient"
+  },
+  {
+   "dt": "ToDo",
+   "fieldname": "custom_surgery_time",
+   "fieldtype": "Time",
+   "insert_after": "custom_doctor",
+   "label": "Surgery Time",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "ToDo",
+   "fieldname": "custom_surgery_required",
+   "fieldtype": "Check",
+   "insert_after": "date",
+   "label": "Surgery Required",
+   "module": "Veterinary Management"
+  },
+  {
+   "dt": "ToDo",
+   "fieldname": "custom_doctor",
+   "fieldtype": "Link",
+   "insert_after": "allocated_to",
+   "label": "Doctor",
+   "module": "Veterinary Management",
+   "options": "Employee"
+  }
+ ]
+}

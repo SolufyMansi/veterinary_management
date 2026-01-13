@@ -1,0 +1,66 @@
+{
+ "ToDo": [
+  {
+   "doctype": "ToDo",
+   "doctype_or_field": "DocType",
+   "module": "Veterinary Management",
+   "property": "field_order",
+   "property_type": "Data",
+   "value": "[\"description_and_status\", \"status\", \"priority\", \"date\", \"custom_surgery_required\", \"column_break_2\", \"color\", \"allocated_to\", \"custom_doctor\", \"custom_surgery_time\", \"description_section\", \"description\", \"section_break_6\", \"reference_type\", \"reference_name\", \"column_break_10\", \"role\", \"assigned_by\", \"assigned_by_full_name\", \"sender\", \"assignment_rule\"]"
+  },
+  {
+   "doctype": "ToDo",
+   "doctype_or_field": "DocField",
+   "field_name": "assignment_rule",
+   "module": "Veterinary Management",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype": "ToDo",
+   "doctype_or_field": "DocField",
+   "field_name": "assigned_by_full_name",
+   "module": "Veterinary Management",
+   "property": "read_only",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype": "ToDo",
+   "doctype_or_field": "DocField",
+   "field_name": "assigned_by",
+   "module": "Veterinary Management",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype": "ToDo",
+   "doctype_or_field": "DocField",
+   "field_name": "role",
+   "module": "Veterinary Management",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype": "ToDo",
+   "doctype_or_field": "DocField",
+   "field_name": "date",
+   "module": "Veterinary Management",
+   "property": "label",
+   "property_type": "Data",
+   "value": "Surgery Date"
+  },
+  {
+   "doctype": "ToDo",
+   "doctype_or_field": "DocField",
+   "field_name": "allocated_to",
+   "module": "Veterinary Management",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "autoname": "SUR-.YYYY.-.#####",
+ "creation": "2026-01-12 11:04:04.105866",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "appointment",
+  "pet_owner",
+  "pet_owner_name",
+  "surgery_name",
+  "surgery_date",
+  "estimated_cost",
+  "column_break_lgek",
+  "pet",
+  "pet_name",
+  "surgery_type",
+  "doctor",
+  "surgery_time",
+  "status",
+  "section_break_aizy",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Appointment",
+   "options": "Appointment"
+  },
+  {
+   "fieldname": "column_break_lgek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pet",
+   "fieldtype": "Link",
+   "label": "Pet Id",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "pet_owner",
+   "fieldtype": "Link",
+   "label": "Pet Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "surgery_name",
+   "fieldtype": "Data",
+   "label": "Surgery Name"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "surgery_date",
+   "fieldtype": "Date",
+   "label": "Surgery Date"
+  },
+  {
+   "fetch_from": "surgery_type.default_cost",
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "surgery_time",
+   "fieldtype": "Time",
+   "label": "Surgery Time"
+  },
+  {
+   "fieldname": "section_break_aizy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Surgery",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "surgery_type",
+   "fieldtype": "Link",
+   "label": "Surgery Type",
+   "options": "Surgery Type"
+  },
+  {
+   "fetch_from": "pet_owner.customer_name",
+   "fieldname": "pet_owner_name",
+   "fieldtype": "Data",
+   "label": "Pet Owner Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "pet.patient_name",
+   "fieldname": "pet_name",
+   "fieldtype": "Data",
+   "label": "Pet Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nScheduled\nWaiting for Payment\nPaid\nHold\nIn Surgery\nCompleted\nCancelled"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-13 10:17:39.280232",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Surgery",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

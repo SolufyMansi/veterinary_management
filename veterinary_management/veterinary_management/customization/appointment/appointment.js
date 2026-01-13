@@ -116,53 +116,58 @@ frappe.ui.form.on("Appointment", {
                 });
             }
         }
-        // else if (frm.doc.custom_reason == "Surgery" && !frm.is_new()){
-        //     check_btn = frm.add_custom_button(__('Surgery'), function () {
-        //         frappe.route_options = {
-        //             "patient": frm.doc.custom_pet,
-        //             "appointment": frm.doc.name,
-        //             "status": "Completed",
+        else if (frm.doc.custom_reason == "Surgery" && !frm.is_new()){
+            check_btn = frm.add_custom_button(__('Create Surgery'), function () {
+                frappe.route_options = {
+                    "appointment": frm.doc.name,
+                    "pet": frm.doc.custom_pet,
+                    "pet_owner":frm.doc.custom_pet_owner,
+                    "status": "Scheduled",
+                    "surgery_date": frm.doc.custom_scheduled_date,
+                    "surgery_time": frm.doc.custom_schedule_time,
+                    "surgery_type": frm.doc.custom_surgery_type,
+                    "doctor":frm.doc.custom_doctor
 
-        //         };
-        //         frappe.set_route("Form", "Check-Up Record", "new-Check-Up Record");
-        //     });
+                };
+                frappe.set_route("Form", "Surgery", "new-Surgery Record");
+            });
 
-        //     if (check_btn) {
-        //         check_btn.css({
-        //             "background-color": "black",
-        //             "color": "white",
-        //             "font-weight": "bold"
-        //         });
-        //     }
-        // }
-    }
-});
-
-frappe.ui.form.on('Appointment', {
-    custom_duration: function(frm) {
-        if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
-            let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
-            let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
-            let formattedEndTime = endTime.format('HH:mm:ss');
-            frm.set_value('custom_scheduled_end_time', formattedEndTime);
-        }
-    },
-
-    custom_schedule_time: function(frm) {
-        if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
-            let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
-            let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
-            let formattedEndTime = endTime.format('HH:mm:ss');
-            frm.set_value('custom_scheduled_end_time', formattedEndTime);
-        }
-    },
-
-    custom_scheduled_date: function(frm) {
-        if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
-            let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
-            let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
-            let formattedEndTime = endTime.format('HH:mm:ss');
-            frm.set_value('custom_scheduled_end_time', formattedEndTime);
+            if (check_btn) {
+                check_btn.css({
+                    "background-color": "black",
+                    "color": "white",
+                    "font-weight": "bold"
+                });
+            }
         }
     }
 });
+
+// frappe.ui.form.on('Appointment', {
+//     custom_duration: function(frm) {
+//         if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
+//             let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
+//             let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
+//             let formattedEndTime = endTime.format('HH:mm:ss');
+//             frm.set_value('custom_scheduled_end_time', formattedEndTime);
+//         }
+//     },
+
+    // custom_schedule_time: function(frm) {
+    //     if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
+    //         let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
+    //         let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
+    //         let formattedEndTime = endTime.format('HH:mm:ss');
+    //         frm.set_value('custom_scheduled_end_time', formattedEndTime);
+    //     }
+    // },
+
+    // custom_scheduled_date: function(frm) {
+    //     if (frm.doc.custom_scheduled_date && frm.doc.custom_schedule_time && frm.doc.custom_duration) {
+    //         let startTime = moment(frm.doc.custom_scheduled_date + ' ' + frm.doc.custom_schedule_time, 'YYYY-MM-DD HH:mm');
+    //         let endTime = startTime.add(frm.doc.custom_duration, 'minutes');
+    //         let formattedEndTime = endTime.format('HH:mm:ss');
+    //         frm.set_value('custom_scheduled_end_time', formattedEndTime);
+    //     }
+    // }
+// });

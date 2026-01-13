@@ -12,7 +12,7 @@ def after_migrate():
 def create_custom_fields():
 	CUSTOM_FIELDS = {}
 	print("Creating/Updating Custom Fields....")
-	path = os.path.join(os.path.dirname(__file__), "snm_sewadal/custom_fields")
+	path = os.path.join(os.path.dirname(__file__), "veterinary_management/custom_fields")
 	for file in os.listdir(path):
 		with open(os.path.join(path, file), "r") as f:
 			CUSTOM_FIELDS.update(json.load(f))
@@ -26,7 +26,7 @@ def create_property_setter():
 
 	PPS = {}
 	print("Creating/Updating Property Setter....")
-	path = os.path.join(os.path.dirname(__file__), "snm_sewadal/property_setter")
+	path = os.path.join(os.path.dirname(__file__), "veterinary_management/property_setter")
 	for file in os.listdir(path):
 		with open(os.path.join(path, file), "r") as f:
 			args = json.load(f)

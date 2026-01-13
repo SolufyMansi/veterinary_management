@@ -2,16 +2,8 @@
  "Appointment": [
   {
    "doctype": "Appointment",
-   "doctype_or_field": "DocType",
-   "module": "Veterinary Management",
-   "property": "field_order",
-   "property_type": "Data",
-   "value": "[\"scheduled_time\", \"custom_scheduled_date\", \"custom_schedule_time\", \"custom_doctor\", \"custom_pet\", \"customer_name\", \"custom_column_break_nne02\", \"status\", \"custom_scheduled_end_time\", \"duration\", \"custom_reason\", \"custom_pet_owner\", \"customer_details_section\", \"custom_doctor_name\", \"customer_phone_number\", \"custom_address_display\", \"col_br_2\", \"custom_owner_name\", \"custom_owner_mobile_no\", \"custom_owner_email_address\", \"address\", \"custom_section_break_857ih\", \"customer_details\", \"linked_docs_section\", \"appointment_with\", \"customer_email\", \"party\", \"col_br_3\", \"customer_skype\", \"calendar_event\", \"custom_company\"]"
-  },
-  {
-   "doctype": "Appointment",
    "doctype_or_field": "DocField",
-   "field_name": "scheduled_time",
+   "field_name": "linked_docs_section",
    "module": "Veterinary Management",
    "property": "hidden",
    "property_type": "Check",
@@ -20,47 +12,20 @@
   {
    "doctype": "Appointment",
    "doctype_or_field": "DocField",
-   "field_name": "scheduled_time",
-   "module": "Veterinary Management",
-   "property": "reqd",
-   "property_type": "Check",
-   "value": "0"
-  },
-  {
-   "doctype": "Appointment",
-   "doctype_or_field": "DocField",
-   "field_name": "status",
-   "module": "Veterinary Management",
-   "property": "options",
-   "property_type": "Select",
-   "value": "\nScheduled\nIn Progress\nCompleted\nCancelled"
-  },
-  {
-   "doctype": "Appointment",
-   "doctype_or_field": "DocField",
-   "field_name": "customer_name",
-   "module": "Veterinary Management",
-   "property": "in_standard_filter",
-   "property_type": "Check",
-   "value": "1"
-  },
-  {
-   "doctype": "Appointment",
-   "doctype_or_field": "DocField",
-   "field_name": "scheduled_time",
-   "module": "Veterinary Management",
-   "property": "in_standard_filter",
-   "property_type": "Check",
-   "value": "1"
-  },
-  {
-   "doctype": "Appointment",
-   "doctype_or_field": "DocField",
-   "field_name": "customer_name",
+   "field_name": "customer_phone_number",
    "module": "Veterinary Management",
    "property": "fetch_from",
    "property_type": "Small Text",
-   "value": "custom_pet.pet_owner_name"
+   "value": "custom_doctor.cell_number"
+  },
+  {
+   "doctype": "Appointment",
+   "doctype_or_field": "DocField",
+   "field_name": "customer_name",
+   "module": "Veterinary Management",
+   "property": "label",
+   "property_type": "Data",
+   "value": "Pet Name"
   },
   {
    "doctype": "Appointment",
@@ -76,27 +41,62 @@
    "doctype_or_field": "DocField",
    "field_name": "customer_name",
    "module": "Veterinary Management",
-   "property": "label",
-   "property_type": "Data",
-   "value": "Pet Name"
-  },
-  {
-   "doctype": "Appointment",
-   "doctype_or_field": "DocField",
-   "field_name": "customer_phone_number",
-   "module": "Veterinary Management",
    "property": "fetch_from",
    "property_type": "Small Text",
-   "value": "custom_doctor.cell_number"
+   "value": "custom_pet.pet_owner_name"
   },
   {
    "doctype": "Appointment",
    "doctype_or_field": "DocField",
-   "field_name": "linked_docs_section",
+   "field_name": "scheduled_time",
+   "module": "Veterinary Management",
+   "property": "in_standard_filter",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype": "Appointment",
+   "doctype_or_field": "DocField",
+   "field_name": "customer_name",
+   "module": "Veterinary Management",
+   "property": "in_standard_filter",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype": "Appointment",
+   "doctype_or_field": "DocField",
+   "field_name": "status",
+   "module": "Veterinary Management",
+   "property": "options",
+   "property_type": "Select",
+   "value": "\nScheduled\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "doctype": "Appointment",
+   "doctype_or_field": "DocField",
+   "field_name": "scheduled_time",
+   "module": "Veterinary Management",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "0"
+  },
+  {
+   "doctype": "Appointment",
+   "doctype_or_field": "DocField",
+   "field_name": "scheduled_time",
    "module": "Veterinary Management",
    "property": "hidden",
    "property_type": "Check",
    "value": "1"
+  },
+  {
+   "doctype": "Appointment",
+   "doctype_or_field": "DocType",
+   "module": "Veterinary Management",
+   "property": "field_order",
+   "property_type": "Data",
+   "value": "[\"scheduled_time\", \"custom_scheduled_date\", \"custom_schedule_time\", \"custom_doctor\", \"custom_doctor_name\", \"customer_phone_number\", \"custom_column_break_nne02\", \"status\", \"custom_scheduled_end_time\", \"custom_duration\", \"custom_reason\", \"custom_surgery_type\", \"customer_details_section\", \"custom_pet\", \"customer_name\", \"custom_species\", \"col_br_2\", \"custom_pet_owner\", \"custom_owner_name\", \"custom_owner_mobile_no\", \"custom_owner_email_address\", \"address\", \"custom_address_display\", \"custom_section_break_857ih\", \"customer_details\", \"linked_docs_section\", \"appointment_with\", \"customer_email\", \"party\", \"col_br_3\", \"customer_skype\", \"calendar_event\", \"custom_company\"]"
   }
  ]
 }

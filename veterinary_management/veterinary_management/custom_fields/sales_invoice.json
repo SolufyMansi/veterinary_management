@@ -1,0 +1,13 @@
+{
+ "Sales Invoice": [
+  {
+   "dt": "Sales Invoice",
+   "fieldname": "custom_surgery",
+   "fieldtype": "Link",
+   "insert_after": "due_date",
+   "label": "Surgery",
+   "module": "Veterinary Management",
+   "options": "Surgery"
+  }
+ ]
+}
