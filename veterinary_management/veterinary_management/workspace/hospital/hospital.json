@@ -1,0 +1,72 @@
+{
+ "charts": [
+  {
+   "chart_name": "Last Month patient admin",
+   "label": "Last Month Patient Hospitalisation Administration"
+  },
+  {
+   "chart_name": "pending lab report",
+   "label": "Lab Test Pending Reports"
+  },
+  {
+   "chart_name": "Today Patients",
+   "label": "Today's Patient"
+  },
+  {
+   "chart_name": "completed lab report",
+   "label": "Lab Test Completed Reports"
+  }
+ ],
+ "content": "[{\"id\":\"IrOc0W8mc-\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Veterinary Management System\",\"col\":12}},{\"id\":\"y_uC76ywFj\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Hospital\",\"col\":4}},{\"id\":\"Gd47H9-ZlZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Doctor\",\"col\":4}},{\"id\":\"A4rKpH3NAI\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Patients\",\"col\":4}},{\"id\":\"BOqyO65-Pl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Hospital Bed\",\"col\":4}},{\"id\":\"mC-TtLN8en\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Appointments\",\"col\":4}},{\"id\":\"rBFC8CU_QQ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"2Tk48Pjvx_\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Today's Patient\",\"col\":6}},{\"id\":\"GQ5uw667vd\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Last Month Patient Hospitalisation Administration\",\"col\":6}},{\"id\":\"itSq7Y4MWg\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Lab Test Pending Reports\",\"col\":6}},{\"id\":\"1BIycUImqO\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Lab Test Completed Reports\",\"col\":6}}]",
+ "creation": "2026-01-13 17:15:30.839333",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Veterinary Management System",
+   "label": "Veterinary Management System"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Hospital",
+ "links": [],
+ "modified": "2026-01-16 11:55:17.519193",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Hospital",
+ "number_cards": [
+  {
+   "label": "Hospital",
+   "number_card_name": "Hospital"
+  },
+  {
+   "label": "Doctor",
+   "number_card_name": "Doctor"
+  },
+  {
+   "label": "Hospital Bed",
+   "number_card_name": "Hospital Bed"
+  },
+  {
+   "label": "Appointments",
+   "number_card_name": "Total Appointments"
+  },
+  {
+   "label": "Patients",
+   "number_card_name": "Patient"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 57.0,
+ "shortcuts": [],
+ "title": "Hospital"
+}

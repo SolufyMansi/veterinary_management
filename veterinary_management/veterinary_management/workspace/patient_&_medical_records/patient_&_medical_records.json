@@ -1,0 +1,87 @@
+{
+ "charts": [
+  {
+   "chart_name": "Patient by Species",
+   "label": "Patients by Breed"
+  },
+  {
+   "chart_name": "Patient by Herd",
+   "label": "Patient by Herd"
+  }
+ ],
+ "content": "[{\"id\":\"_g0OkNfzj6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Patient &amp; Medical Records</span>\",\"col\":12}},{\"id\":\"3Sl-AamyDR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Herd\",\"col\":4}},{\"id\":\"cmW58k1m-y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Breed\",\"col\":4}},{\"id\":\"0w_O4uRwos\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pets\",\"col\":4}},{\"id\":\"ngA50ilBP-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vaccination\",\"col\":4}},{\"id\":\"y648eccYVK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lab Test\",\"col\":4}},{\"id\":\"MNDNpWW8d7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pet Owner List\",\"col\":4}},{\"id\":\"q0KAjz5wWb\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"VdF8vqQh9T\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Patients by Breed\",\"col\":12}},{\"id\":\"A08hPigKEB\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Patient by Herd\",\"col\":12}}]",
+ "creation": "2026-01-09 11:59:29.903258",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "criticize",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Patient & Medical Records",
+ "links": [],
+ "modified": "2026-01-16 11:55:33.794687",
+ "modified_by": "Administrator",
+ "module": "Veterinary Management",
+ "name": "Patient & Medical Records",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Hospital",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 55.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Herd",
+   "link_to": "Patient",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vaccination",
+   "link_to": "Vaccination Record",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Pet Owner List",
+   "link_to": "Customer",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Breed",
+   "link_to": "Breed",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Lab Test",
+   "link_to": "Lab Test Result",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Pets",
+   "link_to": "Patient",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Patient & Medical Records"
+}
