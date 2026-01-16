@@ -20,20 +20,16 @@ def update_visit_date(doc,method=None):
 #         frappe.throw(_("This vet is already booked for this time."))
 
 def validate_double_booking(doc, method=None):
-    pass
-    # start_time = f"{doc.custom_scheduled_date} {doc.custom_schedule_time}"
-    # from datetime import datetime, timedelta
-    # start_time = datetime.strptime(start_time, '%Y-%m-%d %H:%M:%S')
-    # end_time = start_time + timedelta(minutes=doc.custom_duration)
-    # overlapping_appointments = frappe.get_all('Appointment', filters={
-    #     'custom_doctor': doc.custom_doctor,  
-    #     'name': ['!=', doc.name],  
-    #     'custom_scheduled_date': doc.custom_scheduled_date,  
-    # }, fields=["name", "custom_scheduled_date", "custom_schedule_time", "custom_duration"])
+    existing_appointments = frappe.get_all(
+        'Appointment',
+        filters={
+            'custom_doctor': doc.custom_doctor,
+            'custom_scheduled_date': doc.custom_scheduled_date,
+            'custom_schedule_time': doc.custom_schedule_time,
+            'name': ['!=', doc.name]  
+        },
+        fields=['name']
+    )
 
-    # for app in overlapping_appointments:
-    #     existing_start_time = f"{app.custom_scheduled_date} {app.custom_schedule_time}"
-    #     existing_start_time = datetime.strptime(existing_start_time, '%Y-%m-%d %H:%M:%S')
-    #     existing_end_time = existing_start_time + timedelta(minutes=app.custom_duration)
-    #     if (start_time < existing_end_time and end_time > existing_start_time):  
-    #         frappe.throw(_("This vet is already booked during this time."))
+    if existing_appointments:
+        frappe.throw(_("This vet is already booked at this date and time."))
